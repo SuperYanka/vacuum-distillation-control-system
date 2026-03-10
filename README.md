@@ -148,7 +148,7 @@ Results show that the MPC controller provides:
 - faster settling time
 - improved system stability
 
-![Simulink Control Scheme](images/simulink_control_scheme.png)
+![Simulink Control Scheme](images/simulink_control_system_structure.png)
 
 ---
 
@@ -362,7 +362,7 @@ T1м(p) → T3м(p)
 - швидший вихід на сталий режим
 - підвищення стабільності роботи системи
 
-![Simulink Model](images/simulink_control_scheme.png)
+![Simulink Model](images/simulink_control_system_structure.png)
 
 ---
 
