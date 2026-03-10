@@ -152,6 +152,33 @@ Results show that the MPC controller provides:
 
 ---
 
+# Controller Performance Comparison
+
+To evaluate the effectiveness of the developed control systems, a comparison between **PI controller** and **Model Predictive Controller (MPC)** was performed.
+
+The comparison results are presented in the table below.
+
+| Control System | Steady State Value | Overshoot | Settling Time |
+|----------------|-------------------|-----------|---------------|
+| PI Controller  | 1 | 25 % | 36 s |
+| MPC Controller | 1 | 2 % | 23 s |
+
+The simulation results show that both controllers reach the required steady-state value.  
+However, the PI controller produces significant overshoot, which is undesirable for the fuel oil distillation process.
+
+Large temperature overshoot may lead to thermal decomposition of oil fractions, negatively affecting the quality of the final product.
+
+The **MPC controller demonstrates significantly better performance**, providing:
+
+- minimal overshoot
+- faster settling time
+- improved process stability
+
+![Controller Responses](images/controller_step_responses.png)
+
+
+---
+
 # Control Panel Design
 
 A control panel was designed for the automation system.
@@ -363,6 +390,29 @@ T1м(p) → T3м(p)
 - підвищення стабільності роботи системи
 
 ![Simulink Model](images/simulink_control_system_structure.png)
+
+---
+### Порівняння ефективності регуляторів
+
+Для оцінки ефективності створених систем керування було виконано порівняння ПІ-регулятора та MPC-регулятора.
+
+Результати порівняння наведено у таблиці.
+
+| Система керування | Стале значення | Перерегулювання | Час регулювання |
+|-------------------|---------------|-----------------|-----------------|
+| ПІ-регулятор | 1 | 25 % | 36 с |
+| MPC-регулятор | 1 | 2 % | 23 с |
+
+З отриманих результатів можна зробити такі висновки:
+
+- обидві системи забезпечують досягнення заданого значення вихідної величини;
+- ПІ-регулятор має значне перерегулювання (25 %), що є небажаним для процесу перегонки мазуту;
+- різкі температурні коливання можуть спричинити термічне розкладання фракцій і погіршити якість кінцевого продукту;
+- MPC-регулятор забезпечує значно менше перерегулювання (2 %) та швидший вихід на сталий режим.
+
+Таким чином MPC-регулятор демонструє кращі показники якості керування для даного технологічного процесу.
+
+![Порівняння перехідних характеристик](images/controller_step_responses.png)
 
 ---
 
